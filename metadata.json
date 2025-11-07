@@ -1,0 +1,5 @@
+
+{
+  "name": "AI Handwritten Digit Recognition Project",
+  "description": "An interactive project report and demo for a Handwritten Digit Recognition system using a Convolutional Neural Network (CNN) and the MNIST dataset, powered by the Gemini API for live predictions."
+}
