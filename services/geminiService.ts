@@ -14,14 +14,14 @@ const getAiClient = (): GoogleGenAI => {
     if (ai) {
         return ai;
     }
-    
+    console.log("API KEY:",import.meta.env.VITE_API_KEY);
     // In a browser environment without a build process, `process` is not defined.
     // This check prevents a ReferenceError and allows the app to run.
-    if (typeof process === 'undefined' || !process.env || !process.env.API_KEY) {
+    if (!import.meta.env.VITE_API_KEY) {
         throw new Error("API Key not configured. Interactive demo is disabled.");
     }
 
-    ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY});
     return ai;
 };
 
